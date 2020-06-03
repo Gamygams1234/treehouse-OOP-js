@@ -1,48 +1,18 @@
-const ernie = {
-    animal: 'dog',
-    age: '1',
-    breed: 'pug',
-    bark: function(){
-        console.log('Woof!');
-    }
+class Dog {
+  constructor(name, age = 7, breed) {
+    // set up properties on an object
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+  }
+  // we write our functions here without any arrow functions
+  bark() {
+    console.log(this.name + " goes Woof!");
+  }
 }
+const ernie = new Dog("Ernie", 1, "pug");
+const vera = new Dog("Vera", 8, "Border Collie");
+const scofield = new Dog("Scofeild", 6, "Doberman");
+const edel = new Dog("Edel", 7, "German Shorthaired Pointer");
 
-const vera = {
-    animal: 'dog',
-    age: 8,
-    breed: 'Border Collie',
-    bark: function(){
-        console.log('Woof!');
-    }
-}
-
-const scofield = {
-    animal: 'dog',
-    age: 6,
-    breed: 'Doberman',
-    bark: function(){
-        console.log('Woof!');
-    }
-}
-
-const edel = {
-    animal: 'dog',
-    age: 7,
-    breed: 'German Shorthaired Pointer',
-    bark: function(){
-        console.log('Woof!');
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+vera.bark();
