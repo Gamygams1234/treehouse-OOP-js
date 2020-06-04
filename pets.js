@@ -5,7 +5,16 @@ class Dog {
     this.age = age;
     this.breed = breed;
   }
-  // we write our functions here without any arrow functions
+  // this is our getter method and can be accessed in dot or bracket notation
+  get activity() {
+    const today = new Date();
+    const hour = today.getHours();
+    if (hour > 8 && hour <= 20) {
+      return "playing";
+    } else {
+      return "sleeping";
+    }
+  }
   bark() {
     console.log(this.name + " goes Woof!");
   }
