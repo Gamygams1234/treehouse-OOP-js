@@ -15,6 +15,15 @@ class Dog {
       return "sleeping";
     }
   }
+  // this will give us a way to access our setter function
+  get owner() {
+    return this._owner;
+  }
+  // this is the way to make the setter function
+  set owner(owner) {
+    this._owner = owner;
+    console.log(`setter called: ${owner}`);
+  }
   bark() {
     console.log(this.name + " goes Woof!");
   }
@@ -25,3 +34,6 @@ const scofield = new Dog("Scofeild", 6, "Doberman");
 const edel = new Dog("Edel", 7, "German Shorthaired Pointer");
 
 vera.bark();
+
+ernie.owner = "Gamy";
+console.log(ernie.owner);
